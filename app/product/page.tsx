@@ -19,8 +19,6 @@ const Products = () => {
           <Link
             key={product.id}
             href={`/product/${product.id}`}
-            passHref
-            legacyBehavior
           >
             <h1 className="hover:bg-gray-200 px-1 py-2">{product.name}</h1>
           </Link>
