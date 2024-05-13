@@ -1,6 +1,6 @@
 import React from 'react'
 import { handleDocsRoute } from "../../utils/docs/routing";
-import {notFound} from 'next/navigation'
+import { notFound } from 'next/navigation'
 const Docs = ( { params, }: { params: {
   slug: string[]
 } } ) => {
