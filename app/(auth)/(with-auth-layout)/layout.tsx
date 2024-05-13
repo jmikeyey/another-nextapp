@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 const navLinks = [
   { name: "Register", href: "/register" },
   { name: "Login", href: "/login" },
@@ -12,9 +13,11 @@ export default function AboutLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  return (
+  const [value, setValue] = useState('')
+  return (  
     <>
       <h1>Inner Layouts for login and register</h1>
+      <input type="text" value={value} onChange={(e)=>{setValue(e.target.value)}}/>
       {children}
       <div>
         <aside className="w-64" aria-label="Sidebar">
