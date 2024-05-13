@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Home() {
+
   return (
     <main>
       <h1>Hello world</h1>
@@ -9,3 +11,5 @@ export default function Home() {
     </main>
   );
 }
+
+

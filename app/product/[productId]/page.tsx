@@ -1,9 +1,33 @@
 import React from 'react'
-// ** import types
+import { Metadata } from 'next';
 
-const ProductDetails = ({ params }: { params: { productId?: string } }) => {
-  return <div>ProductDetails {params.productId} </div>;
+// ** import types
+type Props = {
+  params: { productId?: string };
+};
+
+
+
+export const generateMetadata = ({ params }: Props): Metadata => {
+  return {
+    title: `Product ${params.productId}`,
+  };
+};
+
+
+const ProductDetails = ({ params }: Props) => {
+  return (
+    <div>
+      ProductDetails {params.productId}
+      <SignIn />
+    </div>
+  );
 };
 
 export default ProductDetails
 
+function SignIn () {
+  return (
+    <h1>Hello Products</h1>
+  )
+}
